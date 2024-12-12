@@ -34,3 +34,7 @@ jobs:
       - name: Set Environment Variables for ${{ matrix.environment }}
         run: echo "ENVIRONMENT=${{ matrix.environment }}" >> $GITHUB_ENV
 
+      # Step 5: Run Unit Tests
+      - name: Run Unit Tests
+        run: pytest tests/test_unit.py --junitxml=unit-test-results-${{ matrix.environment }}.xml --cov=.
+
