@@ -36,5 +36,5 @@ jobs:
 
       # Step 5: Run Unit Tests
       - name: Run Unit Tests
-        run: pytest tests/test_unit.py --junitxml=unit-test-results-${{ matrix.environment }}.xml --cov=.
+        run: pytest tests/test_unit.py
 
